@@ -1,0 +1,23 @@
+Name              Type            Description and example
+# Целые числа
+Integer           int             Whole numbers: 1, 15, 0, -34
+# Числа с плавающей точкой
+Floating Point    float           Numbers with a decimal point:
+                                    0.95, -3.4, 4.98
+# Строка(упорядоченная последовательность символов)         
+Strings           str             Ordered sequence of character:
+                                  'Hi', '123' 'Evgen Loch'
+# Списки(упорядоченная последовательность объектов)
+List              list            Ordered sequence of objects:
+                                  ['hi', 98, -0.48, 'Evgen Loch]
+# Словари(неупоряд. знач. пар "ключ-значение")
+Dictionary        dict            Unordered "key-value" pairs:
+                                  {'number':'754', 'name':'evgen'}
+# Кортежи(упоряд. НЕИЗМЕНЯЕМАЯ посл. объектов)
+Tuple             tup             Ordered immutable sequence of object:
+                                  ('hi', 695. -58.699, 'evgen hui')
+# Множества(неупор. коллекция УНИКАЛЬНЫХ объектов)
+Set               set             Unordered collection of unique objects:
+                                  ('hello', -98.542', 'evgen loch')
+# Логические значения "Истина/Ложь"
+Boolean           bool            Logical value: True, False                                                                                                                                                             
