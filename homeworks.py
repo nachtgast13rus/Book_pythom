@@ -175,12 +175,60 @@ Three bags full
 # new_list_1 = [i[1] for i in greetings]
 # print(new_list_1)
 
-digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-new_digits = []
-for i in digits:
-  if i % 2 != 0:
-    new_digits.append(i)
-print(new_digits)
+# digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# new_digits = []
+# for i in digits:
+#   if i % 2 != 0:
+#     new_digits.append(i)
+# print(new_digits)
 
-new_digits_1 = [i for i in digits  if i % 2 != 0]
-print(new_digits_1)
+# new_digits_1 = [i for i in digits  if i % 2 != 0]
+# print(new_digits_1)
+
+'''Создайте функции cat_voice() and dog_voice(), которые выводят на экран 'Meow!' и 'Woof!' соответственно. Сделайте по одному вызову каждой из функций
+
+Создайте функции cat_voice() and dog_voice(), которые возвращают значения 'Meow!' и 'Woof!' соответственно. Выведите на экран 'Meow!' и 'Woof!' по 2 раза
+
+Создайте функцию get_voice() которая возвращает передаваемый ей в качестве параметра текст c восклицательным знаком.
+
+Создайте функцию, которая генерирует последовательность нечетных чисел в диапазоне от a до b (a и b включительно). Значения a и b должны передаваться в качестве параметров. Результирующая последовательность должна возвращаться в форме объекта list. Решите задание двумя способами - при помощи List Comprehension  и без него
+'''
+
+# def cat_voice():
+#   print('Meow')
+
+
+# def dog_voice():
+#   print('Woof')
+
+# cat_voice()
+# dog_voice()  
+
+# def cat_voice():
+#   return 'Meow'
+
+
+# def dog_voice():
+#   return 'Woof'
+
+# print(cat_voice())
+# print(dog_voice())  
+
+# def get_voice(text):
+#   return text + '!'
+# print(get_voice('Hello'))
+
+# def get_list(a, b):
+#   my_list = []
+#   for i in range(a, b + 1):
+#     if i % 2 != 0:
+#       my_list.append(i)
+#   return my_list
+
+# print(get_list(1, 10))
+
+def get_list(a, b):
+  my_list = [num for num in range(a, b + 1) if num % 2 != 0]
+  return my_list
+
+print(get_list(1, 101))
