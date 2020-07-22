@@ -227,8 +227,79 @@ Three bags full
 
 # print(get_list(1, 10))
 
-def get_list(a, b):
-  my_list = [num for num in range(a, b + 1) if num % 2 != 0]
-  return my_list
+# def get_list(a, b):
+#   my_list = [num for num in range(a, b + 1) if num % 2 != 0]
+#   return my_list
 
-print(get_list(1, 101))
+# print(get_list(1, 101))
+'''Создайте класс BlogPost с атрибутами user_name, text, number_of_likes. Создайте два объекта этого класса. После создания измените атрибут number_of_likes одного из объектов. Распечатайте атрибут number_of_likes каждого из объектов
+'''
+# class BlogPost:
+
+
+#   def __init__(self, user_name, text, number_of_likes):
+#     self.user_name = user_name
+#     self.text = text
+#     self.number_of_likes = number_of_likes
+
+# post_1 = BlogPost('evgen', 'evgen is foggot', 10)
+# post_2 = BlogPost('kobez', 'kobez is retard', 5)
+
+# post_1.number_of_likes = 88
+# print(post_1.number_of_likes)
+# print(post_2.number_of_likes)
+'''Создайте класс BankAccount с атрибутами client_id, client_first_name, client_last_name, balance и методами add() и withdraw(), при помощи которых можно пополнять счет и выводить средства со счета соответственно. Атрибут balance должен инициализироваться по умолчанию значением 0.0 и меняться при срабатывании методов add() и withdraw().
+'''
+
+# class BankAccount:
+
+
+#   def __init__(self,client_id, client_first_name, client_last_name, balance=0.0 ):
+#     self.client_id = client_id
+#     self.client_first_name = client_first_name
+#     self.client_last_name = client_last_name
+#     self.balance = balance
+
+#   def add(self, money):
+#     self.balance = self.balance + money
+  
+#   def withdraw(self, money):
+#     self.balance = self.balance - money
+
+# iam = BankAccount(1, 'Dmitry', 'Tygushev')
+# iam.add(100)
+# iam.add(48596079)
+# iam.add(1)
+# iam.withdraw(400000000)
+# print(iam.balance)
+'''Создайте класс GameCharacter с атрибутами name, health, level и методом speak(), который выводит на печать 'Hi, my name is (значение атрибута name)'.
+
+Создайте класс Villain, наследник класса GameCharacter с теми же атрибутами, методом speak(), который выводит на печать 'Hi, my name is (значение атрибута name) and I will kill you', методом kill(), который принимает в качестве параметра объект класса GameCharacter, присваивает атрибуту health этого объекта значение 0 и  выводит на печать 'Bang-bang, now you're dead'
+'''
+class GameCharacter:
+  def __init__(self, name, health, level):
+    self.name = name
+    self.health = health
+    self.level = level
+
+  def speak(self):
+    print('Hi, my name is {}'.format(self.name))
+
+iam = GameCharacter('nachtgast', 100, 10)
+iam.speak()
+
+class Villian(GameCharacter):
+  def __init__(self, name, health, level):
+    GameCharacter.__init__(self, name, health, level)
+
+  def speak(self):
+    print('Hi, my name is {} and I will kill you'.format(self.name))
+
+  def kill(self, other):
+    other.health = 0
+    print('Bang-bang, now you\'re dead')
+
+you = Villian('hz', 10, 10)
+you.kill(iam)
+print(iam.health)    
+
