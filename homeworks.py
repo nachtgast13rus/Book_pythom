@@ -238,14 +238,22 @@ Three bags full
 
 Создайте функцию your_favorite_color() с позиционным параметром my_color и параметрами **kwargs, которая будет выводить на экран 'My favorite color is (значение my_color), what is your favorite color?', если в параметрах kwargs нет ключа color, и 'My favorite color is (значение my_color), but (значение по ключу color) is also pretty good!', если в параметрах kwargs ключ color присутствует
 '''
-def is_cat_here(*args):
-  return True if 'cat' in str(args).lower() else False   
-print(is_cat_here('cAtdfdg'))
+# def is_cat_here(*args):
+#   return True if 'cat' in str(args).lower() else False   
+# print(is_cat_here('cAtdfdg'))
 
-def is_item_here(item, args):
-  return True if item in args else False
+# def is_item_here(item, args):
+#   return True if item in args else False
 
-print(is_item_here('cat', 'casmobile'))
+# print(is_item_here('cat', 'casmobile'))
+
+# def your_favorite_color(my_color, **kwargs):
+#   if 'color' in kwargs:
+#     print('My favorite color is {}, but {} is also pretty good!'.format(my_color, kwargs['color']))
+#   else:
+#     print('My favorite color is {}, what is your favorite color?'.format(my_color))
+
+# your_favorite_color('blue', name='dimon', age=23, color='green')      
 
 
 
@@ -319,4 +327,12 @@ print(is_item_here('cat', 'casmobile'))
 # you = Villian('hz', 10, 10)
 # you.kill(iam)
 # print(iam.health)    
+'''Создайте класс Chain с атрибутом number_of_items.
+
+Создайте два специальных метода в этом классе.
+
+Первый должен при вызове встроенной функции print() для объекта этого класса выводить 'Chain with (значение number_of_items) items'
+
+Второй должен при вызове встроенной функции len() для объекта этого класса возвращать значение number_of_items этого объекта
+'''
 
