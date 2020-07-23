@@ -232,6 +232,23 @@ Three bags full
 #   return my_list
 
 # print(get_list(1, 101))
+'''Создайте функцию is_cat_here(), которая принимает любое количество аргументов и проверяет есть ли строка 'cat' среди них. Функция должна возвращать True, если такой параметр есть и False в обратном случае. Буквы в строке 'cat' могут быть как большие, так и маленькие
+
+Создайте функцию is_item_here(item, *args), которая проверяет есть ли  item среди args. Функция должна возвращать True, если такой параметр есть и False в обратном случае.
+
+Создайте функцию your_favorite_color() с позиционным параметром my_color и параметрами **kwargs, которая будет выводить на экран 'My favorite color is (значение my_color), what is your favorite color?', если в параметрах kwargs нет ключа color, и 'My favorite color is (значение my_color), but (значение по ключу color) is also pretty good!', если в параметрах kwargs ключ color присутствует
+'''
+def is_cat_here(*args):
+  return True if 'cat' in str(args).lower() else False   
+print(is_cat_here('cAtdfdg'))
+
+def is_item_here(item, args):
+  return True if item in args else False
+
+print(is_item_here('cat', 'casmobile'))
+
+
+
 '''Создайте класс BlogPost с атрибутами user_name, text, number_of_likes. Создайте два объекта этого класса. После создания измените атрибут number_of_likes одного из объектов. Распечатайте атрибут number_of_likes каждого из объектов
 '''
 # class BlogPost:
@@ -276,30 +293,30 @@ Three bags full
 
 Создайте класс Villain, наследник класса GameCharacter с теми же атрибутами, методом speak(), который выводит на печать 'Hi, my name is (значение атрибута name) and I will kill you', методом kill(), который принимает в качестве параметра объект класса GameCharacter, присваивает атрибуту health этого объекта значение 0 и  выводит на печать 'Bang-bang, now you're dead'
 '''
-class GameCharacter:
-  def __init__(self, name, health, level):
-    self.name = name
-    self.health = health
-    self.level = level
+# class GameCharacter:
+#   def __init__(self, name, health, level):
+#     self.name = name
+#     self.health = health
+#     self.level = level
 
-  def speak(self):
-    print('Hi, my name is {}'.format(self.name))
+#   def speak(self):
+#     print('Hi, my name is {}'.format(self.name))
 
-iam = GameCharacter('nachtgast', 100, 10)
-iam.speak()
+# iam = GameCharacter('nachtgast', 100, 10)
+# iam.speak()
 
-class Villian(GameCharacter):
-  def __init__(self, name, health, level):
-    GameCharacter.__init__(self, name, health, level)
+# class Villian(GameCharacter):
+#   def __init__(self, name, health, level):
+#     GameCharacter.__init__(self, name, health, level)
 
-  def speak(self):
-    print('Hi, my name is {} and I will kill you'.format(self.name))
+#   def speak(self):
+#     print('Hi, my name is {} and I will kill you'.format(self.name))
 
-  def kill(self, other):
-    other.health = 0
-    print('Bang-bang, now you\'re dead')
+#   def kill(self, other):
+#     other.health = 0
+#     print('Bang-bang, now you\'re dead')
 
-you = Villian('hz', 10, 10)
-you.kill(iam)
-print(iam.health)    
+# you = Villian('hz', 10, 10)
+# you.kill(iam)
+# print(iam.health)    
 
