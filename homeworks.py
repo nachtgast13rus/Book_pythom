@@ -335,4 +335,16 @@ Three bags full
 
 Второй должен при вызове встроенной функции len() для объекта этого класса возвращать значение number_of_items этого объекта
 '''
+# class Chain:
+#   def __init__(self, number_of_items):
+#     self.number_of_items = number_of_items
 
+#   def __str__(self):
+#     return 'Chain with {} items'.format(str(self.number_of_items))
+
+#   def __len__(self):
+#     return self.number_of_items
+
+# var = Chain(10)
+# print(var)
+# print(len(var))        
